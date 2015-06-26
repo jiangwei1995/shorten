@@ -1,0 +1,24 @@
+{
+  "name": "shorten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express-useragent": "^0.1.8",
+    "express": "^4.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiangwei1995/shorten.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangwei1995/shorten/issues"
+  },
+  "homepage": "https://github.com/jiangwei1995/shorten"
+}
