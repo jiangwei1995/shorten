@@ -3,6 +3,18 @@
  var userAgent = require('express-useragent');
 
  app.use(userAgent.express());
+
+ app.get('/oms*', function(req, res){
+     if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
+       res.redirect('itms-services://?action=download-manifest&url=https://ecpapp.oss-cn-beijing.aliyuncs.com/oms/current/oms360.plist');
+     }else if(req.useragent.isAndroid){
+       res.redirect('http://openbox.mobilem.360.cn/index/d/sid/3021133')
+     }else{
+       res.send("请使用Android或iPhone扫码");
+     }
+
+ });
+
  app.get('/*', function(req, res){
      if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
        res.redirect('itms-services://?action=download-manifest&url=https://gengen1988.github.io/cordova-remote-crosswalk/app.plist');
@@ -13,4 +25,5 @@
      }
 
  });
+
  app.listen(54677);
