@@ -6,7 +6,7 @@
 
  app.get('/oms*', function(req, res){
      if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
-       res.redirect('itms-services://?action=download-manifest&url=https://ecpapp.oss-cn-beijing.aliyuncs.com/oms/current/oms360.plist');
+       res.send("IOS手机端正在建设中...");
      }else if(req.useragent.isAndroid){
        res.redirect('http://openbox.mobilem.360.cn/index/d/sid/3021133')
      }else{
@@ -17,7 +17,7 @@
 
  app.get('/*', function(req, res){
      if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
-       res.redirect('itms-services://?action=download-manifest&url=https://jiangwei1995.github.io/cordova-remote-crosswalk/app.plist');
+        res.send("IOS手机端正在建设中...");
      }else if(req.useragent.isAndroid){
        res.redirect('http://zhushou.360.cn/detail/index/soft_id/3007124')
      }else{
