@@ -17,7 +17,7 @@
 
  app.get('/*', function(req, res){
      if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
-        res.send("https://itunes.apple.com/cn/app/nong-hui-wang/id1008627120?mt=8");
+        res.redirect("https://itunes.apple.com/cn/app/nong-hui-wang/id1008627120?mt=8");
      }else if(req.useragent.isAndroid){
        res.redirect('http://zhushou.360.cn/detail/index/soft_id/3007124')
      }else{
