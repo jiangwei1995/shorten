@@ -6,7 +6,7 @@
 
  app.get('/oms*', function(req, res){
      if(req.useragent.isiPhone||req.useragent.isiPod||req.useragent.isiPad){
-       res.send("IOS手机端正在建设中...");
+       res.send("https://itunes.apple.com/cn/app/zhong-nong-huo-ban-ding-dan/id1016821680?mt=8");
      }else if(req.useragent.isAndroid){
        res.redirect('http://openbox.mobilem.360.cn/index/d/sid/3021133')
      }else{
